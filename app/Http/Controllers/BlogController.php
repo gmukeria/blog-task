@@ -52,7 +52,8 @@ class BlogController
     public function store(CreateBlogRequest $request) {
         $data = $this->blogService->store($request->all());
 
-        return redirect()->route('blog.edit', $data->getAttribute('id'));
+        return redirect()->route('blog.edit', $data->getAttribute('id'))
+            ->with('success','Blog Create Successfully!');
     }
 
     public function edit($id, EditBlogRequest $request) {
@@ -64,12 +65,14 @@ class BlogController
 
     public function update($id, UpdateBlogRequest $request) {
         $data = $this->blogService->update($id, $request->all());
-        return redirect()->route('blog.edit', $data->getAttribute('id'));
+        return redirect()->route('blog.edit', $data->getAttribute('id'))
+            ->with('success','Blog Update Successfully!');
     }
 
     public function delete($id, DeleteBlogRequest $request) {
         $data = $this->blogService->delete($id);
-        return redirect()->route('blog.list');
+        return redirect()->route('blog.list')
+            ->with('success','Blog Deleted Successfully!');
     }
 
 
@@ -80,6 +83,7 @@ class BlogController
 
     public function deleteComment(int $blogId, int $commentId, DeleteCommentRequest $request) {
         $this->blogService->deleteComment($commentId);
-        return redirect(route('blog.show', $blogId).'/#add_comment');
+        return redirect(route('blog.show', $blogId).'/#add_comment')
+            ->with('success','Comment Deleted Successfully!');
     }
 }

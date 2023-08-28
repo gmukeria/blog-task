@@ -1,12 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{--            {{ __('Dashboard') }}--}}
+                        {{ __('Blog Details') }}
         </h2>
     </x-slot>
 
+    <div class="mt-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    @include('layouts.flash-message')
+    </div>
     <div class="blog-details-container">
+
         <div class="blog-segment">
+
             <div class="details-wrapper">
                 <div class="b-details-title">
                     {{ $data->title }}

@@ -7,7 +7,9 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @include('layouts.flash-message')
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+
                 <div class="text-right mt-6 mr-6">
                     @can('create', App\Models\Blog::class)
                         <a href="{{ route('blog.create') }}">

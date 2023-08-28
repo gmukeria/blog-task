@@ -25,9 +25,9 @@ class BlogFactory extends Factory
                 return User::factory()->create()->id;
             },
 
-            'title' => 'fscke title',
-            'desc' => 'fscke desc',
-            'text' => 'fscke text',
+            'title' => 'fake title',
+            'desc' => 'fake desc',
+            'text' => 'fake text',
         ];
     }
 }

@@ -47,7 +47,7 @@ class CommentPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return ($user->hasRole('admin') || $user->hasRole('editor') || $user->hasRole('user'));
     }
 
     /**

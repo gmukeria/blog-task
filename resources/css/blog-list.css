@@ -1,0 +1,102 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-pagination{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.blog-container {
+    width: 86%;
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-wrapper {
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+    width: 380px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    margin-top: 20px;
+    color: black;
+    font-size: 26px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.blog-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blog-desc{
+    margin-top: 20px;
+    color: #444;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100px;
+}
+
+.blog-header {
+    margin-top: 15px;
+    width: 380px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog-author {
+    font-weight: 700;
+    color: #888;
+    font-size: 13px;
+}
+
+.blog-author:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blog-published {
+    margin-left: 10px;
+    color: #888;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.blog-view {
+    color: #888;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+}

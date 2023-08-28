@@ -1,0 +1,21 @@
+@import url('blog-details.css');
+@import url('blog-list.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.form-edit {
+    width: 95%;
+}
+
+.form-show-button {
+    /*width: 10%;*/
+}
